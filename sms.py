@@ -55,5 +55,5 @@ def task():
             pmessage="❤️"+name.upper() +"! its A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation 🙏 ☆☆☆"
             send_telegram(pmessage,to)
             gmessage="its time for "+name.upper() +"! A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation and helping others 🙏 ☆☆☆"
-            send_telegram(gmessage,"-467497612")
+            #send_telegram(gmessage,"-467497612")
         print("------------------")
