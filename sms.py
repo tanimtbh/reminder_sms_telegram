@@ -51,9 +51,9 @@ def task():
         if 28 in team[name]['date']:
             print("@@@You Have to clean")
             to=team[name]['teleid']
-            #send_sms(str(team[name]['number']),name)
+            send_sms(str(team[name]['number']),name)
             pmessage="❤️"+name.upper() +"! its A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation 🙏 ☆☆☆"
             send_telegram(pmessage,to)
             gmessage="its time for "+name.upper() +"! A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation and helping others 🙏 ☆☆☆"
-            #send_telegram(gmessage,"-467497612")
+            send_telegram(gmessage,"-467497612")
         print("------------------")
