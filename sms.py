@@ -48,8 +48,8 @@ mydate=int(mydate[2])
 
 for name, data in team.items():
     print(name)
-    if mydate in team[name]['date']:
+    if 28 in team[name]['date']:
         print("@@@You Have to clean")
-        send_sms(str(team[name]['number']),name)
+        #send_sms(str(team[name]['number']),name)
         print(send_telegram(name))
     print("------------------")
