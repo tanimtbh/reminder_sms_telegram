@@ -27,7 +27,7 @@ def send_sms(to, messeage):
     
 def send_telegram(name):
     message="❤️"+name.upper() +"! its A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation 🙏 ☆☆☆"
-    uri="https://api.telegram.org/bot1755770302:AAGeys1rIM-Z0BuQswdAhh5_kubCXjcCBWc/sendMessage?chat_id={}&text={}".format("1476835755", message)
+    uri="https://api.telegram.org/bot1755770302:AAGeys1rIM-Z0BuQswdAhh5_kubCXjcCBWc/sendMessage?chat_id={}&text={}".format("1455603038", message)
     
     try:
         r = requests.get(
