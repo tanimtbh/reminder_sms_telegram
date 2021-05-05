@@ -48,7 +48,7 @@ def task():
 
     for name, data in team.items():
         print(name)
-        if 28 in team[name]['date']:
+        if mydate in team[name]['date']:
             print("@@@You Have to clean")
             to=team[name]['teleid']
             send_sms(str(team[name]['number']),name)
