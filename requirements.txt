@@ -1,0 +1,15 @@
+
+
+
+pyparsing==2.4.7
+pyRFC3339==1.1
+pyrsistent==0.17.3
+python-apt==2.0.0+ubuntu0.20.4.4
+python-dateutil==2.7.3
+python-debian===0.1.36ubuntu1
+python-pam==1.8.4
+python-vlc==3.0.7110
+python-xapp==1.8.1
+requests==2.22.0
+twilio==6.57.0
+
