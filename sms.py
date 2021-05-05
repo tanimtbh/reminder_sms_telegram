@@ -13,8 +13,8 @@ team = {  "Juman": {'number': '+46761527686', 'teleid': '1070237010', 'date': [1
 
  
 def send_sms(to, messeage):
-    account_sid = 'ACa25c512d487eaeaa4f3d04b3d8192d45' 
-    auth_token = '01dd774b0551a68269d0c974f869377a' 
+    account_sid = 'twilio_sid 487eaeaa4f3d04b3d8192d45' 
+    auth_token = 'twilio_auth_token_68269d0c974f869377a' 
     client = Client(account_sid, auth_token)
  
     message = client.messages.create(  
@@ -26,7 +26,7 @@ def send_sms(to, messeage):
     
     
 def send_telegram(message, to):
-    uri="https://api.telegram.org/bot1755770302:AAGeys1rIM-Z0BuQswdAhh5_kubCXjcCBWc/sendMessage?chat_id={}&text={}".format(to, message)
+    uri="https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={}&text={}".format(to, message)
     
     try:
         r = requests.get(
