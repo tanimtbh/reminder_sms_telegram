@@ -1,1 +1,1 @@
-clock: python sms.py
+clock: python timer.py
