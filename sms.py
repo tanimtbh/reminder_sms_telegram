@@ -23,11 +23,10 @@ def send_sms(to, messeage):
                               to=to 
                           ) 
  
-    print(message.sid)
     
-def send_telegram(name):
-    message="❤️"+name.upper() +"! its A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation 🙏 ☆☆☆"
-    uri="https://api.telegram.org/bot1755770302:AAGeys1rIM-Z0BuQswdAhh5_kubCXjcCBWc/sendMessage?chat_id={}&text={}".format("1455603038", message)
+    
+def send_telegram(message, to):
+    uri="https://api.telegram.org/bot1755770302:AAGeys1rIM-Z0BuQswdAhh5_kubCXjcCBWc/sendMessage?chat_id={}&text={}".format(to, message)
     
     try:
         r = requests.get(
@@ -42,14 +41,19 @@ def send_telegram(name):
     except requests.exceptions.RequestException as e:
         print('HTTP Request failed')
 
-tday = date.today()
-mydate=str(tday).split("-")
-mydate=int(mydate[2])
+def task():
+    tday = date.today()
+    mydate=str(tday).split("-")
+    mydate=int(mydate[2])
 
-for name, data in team.items():
-    print(name)
-    if 28 in team[name]['date']:
-        print("@@@You Have to clean")
-        #send_sms(str(team[name]['number']),name)
-        print(send_telegram(name))
-    print("------------------")
+    for name, data in team.items():
+        print(name)
+        if 28 in team[name]['date']:
+            print("@@@You Have to clean")
+            to=team[name]['teleid']
+            #send_sms(str(team[name]['number']),name)
+            pmessage="❤️"+name.upper() +"! its A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation 🙏 ☆☆☆"
+            send_telegram(pmessage,to)
+            gmessage="its time for "+name.upper() +"! A Cleaning Reminder. Today is "+str(date.today())+", Thank you for your cooporation and helping others 🙏 ☆☆☆"
+            send_telegram(gmessage,"-467497612")
+        print("------------------")
